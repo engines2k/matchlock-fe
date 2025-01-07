@@ -1,8 +1,11 @@
 # Matchlock Frontend
 Front end for Matchlock, a site for useful information and/or statistical analysis of the game [Deadlock](https://store.steampowered.com/app/1422450/Deadlock/). Possibly including information about heroes, items, builds and strategies, and providing data about which items or build patterns are more succesful in certain hero matchups.
 
+### Technologies
+ - **shadcn-vue** - For frontend components
+
 ## Requirements
-- pnpm
+- **pnpm**
 
 ## Setup
 `pnpm install`

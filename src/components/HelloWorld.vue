@@ -1,21 +1,31 @@
 <script setup lang="ts">
 import { ref } from 'vue'
-
-defineProps<{ msg: string }>()
+import { Button } from '@/components/ui/button'
 
 const count = ref(0)
 </script>
 
 <template>
-  <h1>{{ msg }}</h1>
-
+  <div class="container grid grid-cols-2">
+    <div>
+      <h2 class="h-60 text-center uppercase">Featured Hero</h2>
+      <Button class="float-right">Matchups</Button>
+    </div>
+    <div>
+      <h2 class="h-60 text-center uppercase">Featured Items</h2>
+      <Button class="float-right">All Items</Button>
+    </div>
+  </div>
   <div class="card">
+    <Button @click="count++">Click me</Button>
     <button type="button" @click="count++">count is {{ count }}</button>
     <p>
       Edit
       <code>components/HelloWorld.vue</code> to test HMR
     </p>
   </div>
+
+  <Button><RouterLink to="/matchups">Matchups page</RouterLink></Button>
 
   <p>
     Check out
@@ -39,3 +49,6 @@ const count = ref(0)
   color: #888;
 }
 </style>
+<script lang="ts">
+export default {};
+</script>
